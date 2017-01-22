@@ -10,10 +10,7 @@ func main() {
 
 	opts := parseOpts()
 
-	urls := make([]string, opts.numUrls)
-	for i := 0; i < int(opts.numUrls); i++ {
-		urls[i] = fmt.Sprintf("%s/%d", opts.url, int(opts.start)+i)
-	}
+	urls := genUrls(opts.url, opts.start, opts.end)
 
 	targets := make([]vegeta.Target, len(urls))
 
