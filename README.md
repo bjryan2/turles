@@ -35,5 +35,5 @@ flags:
     	The URL which you wish to test against
 
 examples:
-  turles "https://api.foo/users/" -duration=10s -rate 100 
+  turles -url "https://api.foo/users/" -duration=10s -rate 100 
 ```
