@@ -2,6 +2,7 @@ package main
 
 import (
 	"flag"
+	"log"
 	"net/http"
 	"os"
 	"time"
@@ -38,7 +39,11 @@ func parseOpts() *opts {
 	fs.StringVar(&opts.method, "method", "GET", "The HTTP method you wish to use")
 	fs.Var(&opts.headers, "header", "Request header")
 
-	fs.Parse(os.Args[1:])
+	fs.Parse(os.Args[2:])
+
+	if opts.url == "" {
+		log.Fatal("You should provide a url via the -url flag")
+	}
 
 	return opts
 }
