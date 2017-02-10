@@ -1,4 +1,4 @@
-# Vegeta ![GoDoc](https://godoc.org/github.com/bjryan2/turles?status.svg)
+# Turles ![GoDoc](https://godoc.org/github.com/bjryan2/turles?status.svg)
 Turles is a (very) lightweight wrapper around the [vegeta](http://github.com/tsenart/vegeta) loadtesting tool for generating batch load tests over a number of unique urls. It currently supports a *very* constrained featureset and only generates monotonically increasing numeric ids - this may change in the future though :)
 
 ## Install
